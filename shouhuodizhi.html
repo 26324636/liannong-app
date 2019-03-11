@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">收货地址</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="shdz">
+		    	<div id="list">
+		    		
+		    		<div class="shdz-a" style="border-bottom: 1px solid #000;">
+			    		<div class="shdz-a-t">
+			    			<h4><span>钟佳闱</span><span class="mui-icon mui-pull-right" style="font-size: 14px;">17857058385</span></h4>
+			    			<p>浙江省绍兴市越城区东浦镇群贤中路2799号绍兴文理学院元培学院</p>
+			    		</div>
+			    		<div class="shdz-a-b">
+			    			<button>编辑</button>
+			    			<button>删除</button>
+			    		</div>
+			    	</div>
+		    	
+		    		
+		    		
+		    	</div>
+		    	<div class="sz-b">
+		    		<a href="#" id="btn">添加地址</a>
+		    	</div>
+		    </div>
+		</div>
+		<script type="text/javascript" src="js/castapp.js" ></script>
+		<script type="text/javascript">
+			ca.init();
+			var btn=ca.id('btn');
+			ca.click(btn,function(){
+				localStorage.removeItem('address_data');
+				ca.newInterface({
+					url:'tainjiaxindizhi.html',
+					id:'tainjiaxindizhi',
+				})
+			});
+			
+			var list = ca.id('list');
+			
+			var request_url = localStorage.getItem('request_url');
+			var login_phone = localStorage.getItem('login_phone');
+			var arr = [];
+			
+			ca.receiveNotice('update',function(){
+				list.innerHTML = '';
+				get_address();
+			})
+			
+			
+			
+			get_address();
+			function get_address(){
+				
+				ca.get({
+					url:request_url+'App/get_address',
+					data:{
+						phone:login_phone
+					},
+					succFn:function(data){
+						
+						var json = JSON.parse(data);
+						arr = json;
+						for(var a =0;a<json.length;a++){
+							var str = JSON.stringify(json[a]);
+							
+							var tmpl = '<div class="shdz-a" style="border-bottom: 1px solid #000;">'
+								    	+'	<div class="shdz-a-t">'
+								    	+'		<h4><span>'+json[a].name+'</span><span class="mui-icon mui-pull-right" style="font-size: 14px;">'+json[a].phone+'</span></h4>'
+								    	+'		<p>'+json[a].city+json[a].address+'</p>'
+								    	+'	</div>'
+								    	+'	<div class="shdz-a-b">'
+								    	+'		<button data="'+a+'" class="edit">编辑</button>'
+								    	+'		<button iid="'+json[a].id+'" class="del">删除</button>'
+								    	+'	</div>'
+								    	+'</div>';
+							list.innerHTML += tmpl;
+						}
+						
+						click_event();
+						
+						
+					}
+				})
+				
+				
+			}
+			
+			function click_event(){
+				var edit = ca.className('edit');
+				var del = ca.className('del');
+				for(var a=0;a<edit.length;a++){
+					edit[a].addEventListener('tap',function(){
+						
+						var data = this.getAttribute('data');
+						
+						localStorage.setItem('address_data',JSON.stringify(arr[data]));
+						ca.newInterface({
+							url:'tainjiaxindizhi.html',
+							id:'tainjiaxindizhi',
+						})
+						
+						
+					});
+					
+					del[a].addEventListener('tap',function(){
+						
+						var id = this.getAttribute('iid');
+						var _this = this;
+						ca.get({
+							url:request_url+'App/del_address',
+							data:{
+								id:id
+							},succFn:function(data){
+								if(data == 1){
+									ca.prompt('删除成功');
+									list.removeChild(_this.parentNode.parentNode);
+								}else{
+									ca.prompt('删除失败');
+								}
+							}
+						})
+						
+						
+					});
+					
+				}
+			}
+			
+		</script>
+	</body>
+</html>

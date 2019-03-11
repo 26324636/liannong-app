@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.div{
+				border-bottom: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a href="#" class="mui-icon mui-icon-gear mui-pull-right" id="sz" style="color: white;"></a>
+		    <h1 class="mui-title" >我的</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="my">
+		    	<div class="my-a" id="user_info">
+		    		<img class="info" id="head_img" src="img/default.jpg"/>
+		    		<h4 class="info" id="nickname">请登录</h4>
+		    		<p class="info">欢迎来到链农</p>
+		    	</div>
+		    </div>
+		    <div class="my-b">
+		    	<div class="my-b-l">
+		    		<span>0</span>
+		    		<p>商品收藏</p>
+		    	</div><div class="my-b-l">
+		    		<span>0</span>
+		    		<p>旅游收藏</p>
+		    	</div>
+		    	<div class="my-b-l">
+		    		<span>0</span>
+		    		<p>文章收藏</p>
+		    	</div>
+		    	<div class="my-b-l">
+		    		<span>0</span>
+		    		<p>我的关注</p>
+		    	</div>
+		    	
+		    </div>
+		    
+		    <div class="e-box-a">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right" style="position: relative;">
+								<span class="iconfont icon-msnui-dianpu" ></span>
+								我的店铺
+							</a>
+							<!--<span id="message_number" style="display: none; position: absolute;top: 13px;right: 35px;background: #ff6633;border-radius: 50%;height: 20px;width: 20px;color: #fff;line-height: 20px;text-align:center;font-size: 12px;">1</span>-->
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right" style="position: relative;">
+								<span class="iconfont icon-74wodedingdan" ></span>
+								我的订单
+							</a>
+							<!--<span id="message_number" style="display: none; position: absolute;top: 13px;right: 35px;background: #ff6633;border-radius: 50%;height: 20px;width: 20px;color: #fff;line-height: 20px;text-align:center;font-size: 12px;">1</span>-->
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-shoucang" ></span>
+								我的收藏
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-wodetiezi" ></span>
+								我的帖子
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-zhongzhi" ></span>
+								我的种植
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+							<span class="iconfont icon-liulanlishi" ></span>
+								历史浏览
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+		   
+		</div>
+		<script type="text/javascript" src="js/castapp.js" ></script>
+		<script type="text/javascript">
+			var my=document.getElementsByClassName('my');
+			
+			var sz=ca.id('sz');
+			my[0].addEventListener('tap', function() {
+								//alert(1);
+				if(!check_login()) {
+					mui.toast('请登录');
+					mui.openWindow({
+						url: 'login.html', //需要打开页面的url地址 
+						id: 'login', //需要打开页面的url页面id		
+					});
+				}
+				//打开新窗口
+				else {
+					mui.openWindow({
+						url: 'shezhi.html', //需要打开页面的url地址 
+						id: 'shezhi', //需要打开页面的url页面id		
+					});
+				}
+			})
+			sz.addEventListener('tap', function() {
+				//				alert(check_login());
+				if(!check_login()) {
+					mui.toast('请登录');
+					mui.openWindow({
+						url: 'login.html', //需要打开页面的url地址 
+						id: 'login', //需要打开页面的url页面id		
+					});
+				}
+				//打开新窗口
+				else {
+					mui.openWindow({
+						url: 'shezhi.html', //需要打开页面的url地址 
+						id: 'shezhi', //需要打开页面的url页面id		
+					});
+				}
+			})
+			
+			function jump_login() {
+				mui.toast('请登录');
+				mui.openWindow({
+					url: 'login.html',
+					id: 'login'
+				})
+			}
+			var info = document.getElementsByClassName('info');
+			window.addEventListener('update_user_info', function() {
+				//			  alert('我被通知了');
+				get_user_info();
+
+				setTimeout(function() {
+
+					mui.plusReady(function() {
+						var login = plus.webview.getWebviewById('login');
+						var register = plus.webview.getWebviewById('register');
+						if(login) {
+							login.close();
+						}
+						if(register) {
+							register.close();
+						}
+
+					});
+
+				}, 5000);
+			});
+			get_user_info();
+			function get_user_info() {
+				//如果没登录，直接返回
+				if(!check_login()) {
+					info[0].src = 'img/default.jpg';
+					info[1].innerHTML = '请登录';
+					
+					message_number.style.display = 'none';
+					return;
+				}
+				var phone = localStorage.getItem('login_phone');
+				var request_url = localStorage.getItem('request_url');
+
+				mui.get(request_url + 'User/get_user_info', {
+					phone_data: phone
+				}, function(data) {
+
+					localStorage.setItem('user_data', JSON.stringify(data));
+					//					alert(data);
+
+					//在这里，都解析一下，解析不一定会错，不解析有可能不对 -> 仅限castapp
+					//					var json = JSON.parse(data);
+					var json = data;
+
+					var head_img = 'img/default.jpgg';
+					if(json.head_img) {
+						head_img = json.head_img;
+					}
+
+					var nickname = "";
+
+					if(json.nickname) {
+						nickname = json.nickname;
+					} else {
+						nickname = json.phone;
+					}
+					var about = "";
+					if(json.about) {
+						about = json.about;
+					} else {
+						about = "这家伙很懒，啥也没写";
+					}
+					info[0].src = head_img;
+					info[1].innerHTML = nickname;
+					info[2].innerHTML = about;
+					
+					//设置未读消息
+//					alert(json.message_number);
+					if(json.message_number == 0){
+						message_number.style.display = 'none';
+					}
+					else{
+						message_number.innerHTML = json.message_number;
+						message_number.style.display = 'block';
+					}
+
+				}, 'json');
+			}
+
+			function check_login() {
+				//判断是否登录
+				var phone = localStorage.getItem('login_phone');
+				//				alert(phone);
+				if(phone == '' || phone == null || phone == undefined) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+	</body>
+</html>

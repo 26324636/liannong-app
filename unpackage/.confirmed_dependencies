@@ -1,0 +1,255 @@
+{
+	"index.html": {
+		"resources": [
+			"shouye.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css"
+		],
+		"refer": [
+			"shouye.html",
+			"wode.html",
+			"fenlei.html",
+			"shequ.html",
+			"c.html",
+			"gonglue.html",
+			"gonglue1.html",
+			"judian.html"
+		]
+	},
+	"shouye.html": {
+		"resources": [
+			"img/2.png",
+			"img/10.png",
+			"img/8.png",
+			"img/shuichan.jpg",
+			"img/guoshu.jpg",
+			"img/9.png",
+			"js/castapp.js",
+			"img/3.png",
+			"img/11.png",
+			"img/1.png",
+			"img/5.png",
+			"css/iconfont.css",
+			"img/4.png",
+			"css/style.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"img/guoshu.png",
+			"img/shuishan3.png",
+			"img/12.png",
+			"img/shuichan1.png",
+			"img/4.jpg",
+			"img/shuichan2.png",
+			"img/guoshu3.png",
+			"img/2.jpg",
+			"img/1.jpg",
+			"img/guoshu2.png",
+			"img/guoshu4.png",
+			"img/3.jpg",
+			"img/centre-1.png",
+			"img/centre-4.png",
+			"img/shouye-baner1.png",
+			"img/shouye-baner4.png",
+			"img/shouye-baner2.png",
+			"img/shouye-baner3.png",
+			"img/centre-2.png",
+			"img/centre-3.png"
+		],
+		"refer": [
+			"location.html"
+		]
+	},
+	"wode.html": {
+		"resources": [
+			"img/default.jpg",
+			"js/castapp.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"img/jianbian3.jpg"
+		],
+		"refer": [
+			"shezhi.html",
+			"login.html"
+		]
+	},
+	"shezhi.html": {
+		"refer": [
+			"gerenziliao.html",
+			"shouhuodizhi.html",
+			"xitongxiaoxi.html",
+			"guanyuwomen.html",
+			"yijianfankui.html"
+		],
+		"resources": [
+			"js/castapp.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.css"
+		]
+	},
+	"gerenziliao.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"img/default.jpg",
+			"combinationSelect/poppicker.css",
+			"combinationSelect/poppicker.js",
+			"combinationSelect/picker.js",
+			"combinationSelect/picker.css",
+			"combinationSelect/city.data-3.js",
+			"css/iconfont.css"
+		],
+		"refer": []
+	},
+	"login.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"img/logo.png",
+			"img/logo1.png"
+		],
+		"refer": [
+			"register.html"
+		]
+	},
+	"guanyuwomen.html": {
+		"resources": [
+			"img/logo.jpg"
+		],
+		"refer": []
+	},
+	"fenlei.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css"
+		],
+		"refer": []
+	},
+	"shequ.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"img/logo.png",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"zhutitie.html"
+		]
+	},
+	"c.html": {
+		"resources": [
+			"shequ.html",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"shequ.html",
+			"fatie.html"
+		]
+	},
+	"zhutitie.html": {
+		"resources": [
+			"img/3.png",
+			"img/2.png",
+			"img/1.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"img/logo.png",
+			"img/1.jpg",
+			"img/2.jpg",
+			"img/3.jpg"
+		],
+		"refer": []
+	},
+	"fatie.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"img/1.png",
+			"img/guoshu.jpg",
+			"img/9.png"
+		],
+		"refer": []
+	},
+	"location.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css"
+		],
+		"refer": []
+	},
+	"gonglue.html": {
+		"resources": [
+			"img/nongjia4.jpg",
+			"img/nongjia3.jpg",
+			"img/nongjia2.png",
+			"img/nongjia.png",
+			"img/jingdian1.jpg"
+		],
+		"refer": []
+	},
+	"gonglue1.html": {
+		"resources": [
+			"img/jiaoyu4.png",
+			"img/nongjia4.jpg",
+			"img/jiaoyu2.png",
+			"img/nongjia3.jpg",
+			"img/nongjia2.png",
+			"img/jiaoyu5.jpg",
+			"img/nongjia.png",
+			"img/jingdian1.jpg",
+			"img/jiaoyu1.png",
+			"img/jiaoyu3.png"
+		]
+	},
+	"judian.html": {
+		"resources": [
+			"img/hunantucaiguan.jpg",
+			"img/xianfengshuiguo.png",
+			"img/xiyuan.jpg",
+			"js/jquery.min.js",
+			"img/laoyuanzi.jpg",
+			"img/yeshi.png",
+			"img/aideguoshi.png",
+			"img/zhujitucaiguan.jpg",
+			"img/longxiang.jpg",
+			"img/baiguoyuan.jpg",
+			"img/laotaimen.jpg",
+			"img/nongjiacaiyuan.jpg",
+			"img/xiandao.jpg",
+			"js/castapp.js",
+			"css/iconfont.css"
+		]
+	}
+}

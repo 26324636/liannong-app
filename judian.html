@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<script type="text/javascript" src="js/castapp.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav wm-bar public-color">
+			<h1 class="mui-title">聚点</h1>
+		</header>
+		<div id="judian">
+			<div class="mui-content">
+				<div class="wm-serch">
+					<div class="mui-input-row">
+						<input id="keywords" type="search" class="mui-input-clear" placeholder="请输入商家名字" />
+					</div>
+				</div>
+
+				<div class="mall-bottom">
+					<div class="left">
+						<div class="sort-list removeSel clickSel" data-typeid="1">
+							<text >特惠推荐</text>
+						</div>
+						<div class="sort-list removeSel" data-typeid="2">
+							<text>水果</text>
+						</div>
+						<div class="sort-list removeSel" data-typeid="3">
+							<text >蔬菜</text>
+						</div>
+						<div class="sort-list removeSel" data-typeid="4">
+							<text>畜牧</text>
+						</div>
+					</div>
+					<div class="right">
+						<div class="tabTit">
+							<div class="flex1">
+								<text>按评价</text>
+								<div class="fs-up">
+									<span class="iconfont icon-triangle-top" style="color:black;"></span>
+									<span class="iconfont icon-triangle-bottom" style="color:black;"></span>
+								</div>
+							</div>
+							<div class="flex1">
+								<text>按距离</text>
+								<div class="fs-up">
+									<span class="iconfont icon-triangle-top" style="color:black;"></span>
+									<span class="iconfont icon-triangle-bottom" style="color:black;"></span>
+								</div>
+							</div>
+							<div class="flex1">
+								<text>按价格</text>
+								<div class="fs-up">
+									<span class="iconfont icon-triangle-top" style="color:black;"></span>
+									<span class="iconfont icon-triangle-bottom" style="color:black;"></span>
+								</div>
+							</div>
+						</div>
+
+						<!--特惠推荐-->
+						<div class="wm-list" style="display: block;">
+							
+
+							<div class="wm-list-div xianfeng">
+								<div class="wm-list-div-l">
+									<img src="img/xianfengshuiguo.png" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>鲜丰水果（绍兴东街）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥48</span></h5>
+											<h5 style="margin-left: 10px;"><div>5.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市东街25号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div aideguoshi">
+								<div class="wm-list-div-l">
+									<img src="img/aideguoshi.png" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>爱的果实（世贸）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥21</span></h5>
+											<h5 style="margin-left: 10px;"><div>4.5km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">胜利东路360号世贸广场百盛百货4F401</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div zhujitucai">
+								<div class="wm-list-div-l">
+									<img src="img/zhujitucaiguan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>诸暨土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥28</span></h5>
+											<h5 style="margin-left: 10px;"><div>2.8km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市越城区阳明北路453号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div laotaimen">
+								<div class="wm-list-div-l">
+									<img src="img/laotaimen.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>老台门土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥52</span></h5>
+											<h5 style="margin-left: 10px;"><div>3.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市诸暨市暨阳北路8-5</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div laoyuanzi">
+								<div class="wm-list-div-l">
+									<img src="img/laoyuanzi.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>老院子农家菜</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥68</span></h5>
+											<h5 style="margin-left: 10px;"><div>7.3km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市人民西路横头0号</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--水果-->
+						<div class="wm-list" style="display: none;">
+							<div class="wm-list-div aideguoshi">
+								<div class="wm-list-div-l">
+									<img src="img/aideguoshi.png" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>爱的果实（世贸）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥21</span></h5>
+											<h5 style="margin-left: 10px;"><div>4.5km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">胜利东路360号世贸广场百盛百货4F401</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div xianfeng">
+								<div class="wm-list-div-l">
+									<img src="img/xianfengshuiguo.png" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>鲜丰水果（绍兴东街）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥48</span></h5>
+											<h5 style="margin-left: 10px;"><div>5.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市东街25号</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div yeshi">
+								<div class="wm-list-div-l">
+									<img src="img/yeshi.png" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>叶氏兄弟果业（王充）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥52</span></h5>
+											<h5 style="margin-left: 10px;"><div>3.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省上虞市百官街道王充路715号</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div baiguoyuan">
+								<div class="wm-list-div-l">
+									<img src="img/baiguoyuan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>百果园</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥68</span></h5>
+											<h5 style="margin-left: 10px;"><div>7.3km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市鲁迅西路9号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div xiandao">
+								<div class="wm-list-div-l">
+									<img src="img/xiandao.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>鲜岛（原大华果园）</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥36</span></h5>
+											<h5 style="margin-left: 10px;"><div>7.3km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">3.9</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市解放南路663号</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--蔬菜-->
+						<div class="wm-list" style="display: none;">
+							<div class="wm-list-div laotaimen">
+								<div class="wm-list-div-l">
+									<img src="img/laotaimen.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>老台门土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥52</span></h5>
+											<h5 style="margin-left: 10px;"><div>3.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市诸暨市暨阳北路8-5</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div laoyuanzi">
+								<div class="wm-list-div-l">
+									<img src="img/laoyuanzi.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>老院子农家菜</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥68</span></h5>
+											<h5 style="margin-left: 10px;"><div>7.3km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市人民西路横头0号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div nongjiacaiyuan">
+								<div class="wm-list-div-l">
+									<img src="img/nongjiacaiyuan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>农家菜园饭店</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥28</span></h5>
+											<h5 style="margin-left: 10px;"><div>2.8km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市人民中路藕芽池底6号</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--畜牧-->
+						<div class="wm-list" style="display: none;">
+							<div class="wm-list-div xiyuan">
+								<div class="wm-list-div-l">
+									<img src="img/xiyuan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>西源土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥52</span></h5>
+											<h5 style="margin-left: 10px;"><div>3.2km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市诸暨市五泄西源景区</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="wm-list-div longxiang">
+								<div class="wm-list-div-l">
+									<img src="img/longxiang.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>隆祥土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥68</span></h5>
+											<h5 style="margin-left: 10px;"><div>7.3km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴诸暨市艮塔西路76-6号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div hunan">
+								<div class="wm-list-div-l">
+									<img src="img/hunantucaiguan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>湖南土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥28</span></h5>
+											<h5 style="margin-left: 10px;"><div>2.8km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市人民中路藕芽池底6号</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="wm-list-div zhujitucai">
+								<div class="wm-list-div-l">
+									<img src="img/zhujitucaiguan.jpg" alt="" />
+								</div>
+								<div class="wm-list-div-r">
+									<div class="wm-list-div-r-o">
+										<div class="wm-list-div-r-o-l">
+											<h4>诸暨土菜馆</h4>
+										</div>
+										<div class="wm-list-div-r-o-r">
+											<h5><span>人均 ¥28</span></h5>
+											<h5 style="margin-left: 10px;"><div>2.8km</div></h5>
+										</div>
+									</div>
+									<div class="wm-list-div-r-t">
+										<div class="wm-list-div-r-t-l">
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys star-sctive"></span>
+											<span class="mui-icon mui-icon-star-filled star-ys"></span>
+											<span class="small-txt o-txt">4.5</span>
+										</div>
+
+									</div>
+									<div class="wm-list-div-r-tt">
+										<span class="small-txt">浙江省绍兴市越城区阳明北路453号</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/castapp.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			var xianfeng = document.getElementsByClassName('xianfeng');
+			//			alert(list[0]);\
+			for(i = 0 ; i < xianfeng.length;i++)
+			{
+				xianfeng[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/xianfeng.html', //需要打开页面的url地址 
+						id: 'xianfeng', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var aideguoshi = document.getElementsByClassName('aideguoshi');
+			//			alert(list[0]);\
+			for(i = 0 ; i < aideguoshi.length;i++)
+			{
+				aideguoshi[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/aideguoshi.html', //需要打开页面的url地址 
+						id: 'aideguoshi', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var yeshi = document.getElementsByClassName('yeshi');
+			//			alert(list[0]);\
+			for(i = 0 ; i < yeshi.length;i++)
+			{
+				yeshi[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/yeshi.html', //需要打开页面的url地址 
+						id: 'yeshi', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var baiguoyuan = document.getElementsByClassName('baiguoyuan');
+			//			alert(list[0]);\
+			for(i = 0 ; i < baiguoyuan.length;i++)
+			{
+				baiguoyuan[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/baiguoyuan.html', //需要打开页面的url地址 
+						id: 'baiguoyuan', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var xiandao = document.getElementsByClassName('xiandao');
+			//			alert(list[0]);\
+			for(i = 0 ; i < xiandao.length;i++)
+			{
+				xiandao[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/xiandao.html', //需要打开页面的url地址 
+						id: 'xiandao', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var laotaimen = document.getElementsByClassName('laotaimen');
+			//			alert(list[0]);\
+			for(i = 0 ; i < laotaimen.length;i++)
+			{
+				laotaimen[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/laotaimen.html', //需要打开页面的url地址 
+						id: 'laotaimen', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var laoyuanzi = document.getElementsByClassName('laoyuanzi');
+			//			alert(list[0]);\
+			for(i = 0 ; i < laoyuanzi.length;i++)
+			{
+				laoyuanzi[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/laoyuanzi.html', //需要打开页面的url地址 
+						id: 'laoyuanzi', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var nongjiacaiyuan = document.getElementsByClassName('nongjiacaiyuan');
+			//			alert(list[0]);\
+			for(i = 0 ; i < nongjiacaiyuan.length;i++)
+			{
+				nongjiacaiyuan[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/nongjiacaiyuan.html', //需要打开页面的url地址 
+						id: 'nongjiacaiyuan', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var xiyuan = document.getElementsByClassName('xiyuan');
+			//			alert(list[0]);\
+			for(i = 0 ; i < xiyuan.length;i++)
+			{
+				xiyuan[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/xiyuan.html', //需要打开页面的url地址 
+						id: 'xiyuan', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var longxiang = document.getElementsByClassName('longxiang');
+			//			alert(list[0]);\
+			for(i = 0 ; i < longxiang.length;i++)
+			{
+				longxiang[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/longxiang.html', //需要打开页面的url地址 
+						id: 'longxiang', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var hunan = document.getElementsByClassName('hunan');
+			//			alert(list[0]);\
+			for(i = 0 ; i < hunan.length;i++)
+			{
+				hunan[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/hunan.html', //需要打开页面的url地址 
+						id: 'hunan', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			var zhujitucai = document.getElementsByClassName('zhujitucai');
+			//			alert(list[0]);\
+			for(i = 0 ; i < zhujitucai.length;i++)
+			{
+				zhujitucai[i].addEventListener('tap', function() {
+					mui.openWindow({
+						url: 'shop/zhujitucai.html', //需要打开页面的url地址 
+						id: 'zhujitucai', //需要打开页面的url页面id		
+					});
+				})
+			}
+			
+			
+			$(".sort-list").click(function(){
+				 $(this).addClass("clickSel");
+				 $(this).addClass("clickSel");
+        		 $(this).siblings().removeClass("clickSel");
+        		 $(this).siblings().addClass("removeSel");
+			})
+
+
+			var arrdiv = document.getElementsByClassName('wm-list');
+			var arrlist = document.getElementsByClassName('sort-list');
+
+			for(var i = 0; i < arrlist.length; i++) {
+				arrlist[i].index = i
+				arrlist[i].addEventListener('tap', function() {
+					for(var j = 0; j < arrdiv.length; j++) {
+						arrdiv[j].style.display = "none";
+					}
+					arrdiv[this.index].style.display = "block";
+
+					//					alert(this.index) 
+
+				});
+
+			}
+		</script>
+	</body>
+
+</html>

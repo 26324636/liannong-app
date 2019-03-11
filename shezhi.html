@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav public-color ">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title" >设置</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="sz">
+		    	<div class="sz-a">
+		    		<!--mlist-->
+		    		<ul class="mui-table-view tu">
+	    		        <li class="mui-table-view-cell">
+	    		            <a class="mui-navigate-right">
+	    		                <span class="iconfont icon-gerenziliao1 tu-yi" style="font-size: 25px;"></span>个人资料
+	    		            </a>
+	    		        </li> 
+	    		         <li class="mui-table-view-cell">
+	    		            <a class="mui-navigate-right">
+	    		          		<span class="iconfont icon-shouhuodizhiguanli tu-liu" style="font-size: 25px;"></span>收货地址
+	    		            </a>
+	    		        </li>
+	    		         <li class="mui-table-view-cell">
+	    		            <a class="mui-navigate-right">
+	    		             <span class="iconfont icon-xiaoxi tu-san" style="font-size: 24px;padding: 1px;"></span>系统消息
+	    		            </a>
+							<span id="message_number" style="display: none; position: absolute;top: 13px;right: 35px;background: #ff6633;border-radius: 50%;height: 20px;width: 20px;color: #fff;line-height: 20px;text-align:center;font-size: 12px;">1</span>
+	    		            
+	    		        </li>
+	    		        <li class="mui-table-view-cell">
+	    		            <a class="mui-navigate-right">
+	    		          		<span class="iconfont icon-yijianfankui n tu-wu" style="font-size: 24px;padding: 1px;" ></span>意见反馈
+	    		            </a>
+	    		        </li>
+	    		        <li class="mui-table-view-cell">
+	    		            <a class="mui-navigate-right">
+	    		          		<span class="iconfont icon-guanyuwomen-copy tu-si" style="font-size: 25px;"></span>关于我们 
+	    		            </a>
+	    		        </li>
+	    		    </ul>
+		    	</div>
+		    	<div class="sz-b">
+		    		<a href="javascript:;" id="btn">退出</a>
+		    	</div>
+		    </div>
+		</div>
+		<script type="text/javascript" src="js/castapp.js" ></script>
+		<script type="text/javascript">
+			ca.init();
+			
+			var li=ca.tagName('li');
+			ca.click(li[0],function(){
+				
+				ca.newInterface({
+					url:'gerenziliao.html',
+					id:'gerenziliao',
+				})
+			});
+			ca.click(li[1],function(){
+				ca.newInterface({
+					url:'shouhuodizhi.html',
+					id:'shouhuodizhi',
+				})
+			});
+			ca.click(li[2],function(){
+				ca.newInterface({
+					url:'xitongxiaoxi.html',
+					id:'xitongxiaoxi',
+				})
+			});
+			ca.click(li[3],function(){
+				ca.newInterface({
+					url:'yijianfankui.html',
+					id:'yijianfankui',
+				})
+			});
+			ca.click(li[4],function(){
+				ca.newInterface({
+					url:'guanyuwomen.html',
+					id:'guanyuwomen',
+				})
+			});
+			
+			
+			var quit = document.getElementById('btn');
+			quit.addEventListener('tap', function(){
+
+				var btnArray = ['是', '否'];
+				mui.confirm('是否退出登录？', '提示', btnArray, function(e) {
+					if(e.index == 0) {
+						
+						//清除登录依据的本地存储
+						localStorage.removeItem('login_phone');
+						
+						//清除本地的最新用户信息
+						localStorage.removeItem('user_data');
+						mui.plusReady(function(){
+							
+							var e = plus.webview.getWebviewById('wode.html');
+							mui.fire(e,'update_user_info',{});	
+							mui.back();
+							
+//							var index = plus.webview.getLaunchWebview();
+//							mui.fire(index,'gohome',{});
+//							
+						});
+					} else {
+						alert('点击了- 否');
+					}
+				});
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

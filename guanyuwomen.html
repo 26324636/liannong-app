@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">关于我们</h1>
+		</header>
+		<div class="mui-content">
+			<div class="gywm">
+				<div class="gywm-a">
+			    	<img src="img/logo.jpg"/>
+			    	<h4>链农</h4>
+			    	<p>V1.1.0</p>
+			    </div>
+			    <button id="btn" class="xg-a">检查更新</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/castapp.js"></script>
+	<script>
+		
+		ca.init();
+		var btn = ca.id('btn');
+		btn.addEventListener('tap',function(){
+			
+			//获得当前的版本号
+			var version = ca.getOs('version');
+			
+//			alert(version);
+
+			var request_url = localStorage.getItem('request_url');
+			ca.get({
+				url:request_url+'App/version',
+				data:{},
+				succFn:function(data){
+//					alert(data);
+					var json = JSON.parse(data);
+					if(json.version != version){
+						//有新版本
+						
+						ca.confirm({
+							title:'温馨提示',
+							content:'发现新版本,是否更新?',
+							callback:function(data){
+								if(data){
+									ca.openUrl(json.url);
+								}
+							}
+						})
+						
+						
+					}else{
+						ca.prompt('目前没有新版本');
+					}
+				}
+			})
+
+			
+			
+		});
+		
+		
+		
+	</script>
+</html>

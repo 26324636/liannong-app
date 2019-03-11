@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">意见反馈</h1>
+		</header>
+		<div class="mui-content">
+		    <form action="javascript:;">
+	            <textarea id="text" cols="70" rows="4" placeholder="请输入您的意见"></textarea>
+	        </form>
+		    <button id="btn"  class="xg-a">提交</button>
+		</div>
+	</body>
+		
+	<script src="js/castapp.js"></script>
+	<script>
+		
+		ca.init();
+		
+		var btn = ca.id('btn');
+		var text = ca.id('text');
+		btn.addEventListener('tap',function(){
+			
+			var value = text.value;
+			if(value == ''){
+				ca.prompt('不能为空');
+				return;
+			}
+		})
+		
+	</script>
+	
+</html>
